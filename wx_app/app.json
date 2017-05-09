@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/loan/index",
+    "pages/finances/index",
+    "pages/service/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "小程序"
+  },
+  
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,70 @@
+.container {
+    text-align: center;
+}
+
+/*head*/
+.home-banner {
+    width: 100%; height: 480rpx;
+    font-weight: bold;
+    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494304401162&di=2db05ab4770795e04859abe369fc800a&imgtype=0&src=http%3A%2F%2Fimg1.gamedog.cn%2F2013%2F11%2F27%2F121-13112G525020.jpg) no-repeat center center;
+    background-size: 100% 100%;
+
+}
+.cover {
+    width: 100%; height: 100%;
+    padding: 168rpx 0;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.2);
+}
+.title {
+    font-size: 40rpx;
+    color: #fff;
+
+}
+.hr {
+    width: 180rpx;
+    height: 0;
+    border: 1px solid #fff;
+    margin:20rpx auto;
+}
+.title-dec {
+    font-size: 50rpx;
+}
+/*content*/
+.content-list {
+    width: 100%;
+}
+.content-list-cell {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%; height: 160rpx;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 36rpx;
+}
+.left-cell {
+    flex: 2;
+    text-align: left;
+}
+.cell-title {
+    font-size: 36rpx;
+    margin-bottom: 12rpx;
+}
+.cell-content {
+    font-size: 24rpx;
+}
+.right-cell {
+    flex: 1;
+    line-height: 98rpx;
+    color: #949494;
+    text-align: right;
+}
+.right-cell image {
+    width: 28rpx;
+    height: 28rpx;
+    vertical-align: -2rpx;
+    margin-left: 12rpx;
+}
+.hot-line {
+    margin-top: 110rpx;
+    color: #bcbcbc;
+}

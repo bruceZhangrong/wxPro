@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="home-banner">
+        <view class="cover">
+            <text class="title">公积金客户</text>
+            <view class="hr"></view>
+            <text class="title-dec mark-color">三大专属礼遇</text>
+        </view>
+    </view>
+    <view class="content-list">
+        <view wx:for="{{giftContents}}" wx:for-item="items" class="content-list-cell" data-index="{{index}}" bindtap="goTo" wx:key="">
+            <view class="left-cell">
+                <view class="cell-title mark-color">{{items.title}}</view>
+                <text class="cell-content">{{items.content}}</text>
+            </view>
+            <view class="right-cell">
+                <text>查看更多</text>
+                <image src="../../images/icon-arrow-right.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="hot-line">
+        <text bindtap="call">建行服务热线：95533</text>
+    </view>
+</view>
