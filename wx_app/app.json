@@ -1,10 +1,16 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/index/index", 
     "pages/loan/index",
     "pages/finances/index",
     "pages/finances/financesdetail/index",
-    "pages/service/index"
+    "pages/service/index",
+    "pages/loan/getlimit/getlimit",
+    "pages/loan/limit/limit",
+    "pages/loan/userinfo/userinfo",
+    "pages/loan/search/search",
+    "pages/finances/finances",
+    "pages/service/service"
   ],
   "window": {
     "navigationBarTitleText": "小程序"

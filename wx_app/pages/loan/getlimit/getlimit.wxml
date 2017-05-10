@@ -1,0 +1,52 @@
+<view class="container">
+    <view class="home-banner">
+        <view class="cover">
+            <view class="cover-words">
+              <view class="title  mark-color">公积金客户</view>
+              <view class="hr"></view>
+              <view class="title-dec">信用贷款30万</view>
+            </view>
+            <view class="bottom-tips">
+                <view class="tips-cell" wx:for="{{bannerBottomAd}}" wx:for-item="items">
+                    {{items.content}}
+                    <text class="mark-color">{{items.variable}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="schedule">
+        <view class="progress-wrapper">
+            <view class="progress-bar">
+                <view class="bar-cell active">
+                    <view class="bar-step">
+                        <view class="bar-step-inside">1</view>
+                    </view>
+                    <text>身份信息</text>
+                </view>
+                <view class="bar-cell active">
+                    <view class="bar-step">
+                        <view class="bar-step-inside">2</view>
+                    </view>
+                    <text>额度</text>
+                </view>
+                <view class="bar-cell active">
+                    <view class="bar-step">
+                        <view class="bar-step-inside">3</view>
+                    </view>
+                    <text>提取额度</text>
+                </view>
+            </view>
+            <view class="progress-line">
+                <view class="line-list on"></view>
+                <view class="line-list on"></view>
+            </view>
+        </view>
+        <view class="user-info">
+            <view class="input-cell">
+                <view class="input-title">手机号码：</view>
+                <input placeholder="请输入您的手机号码" />
+            </view>
+        </view>
+        <button class="btn-next" bindtap="goNext">领取额度</button>
+    </view>
+</view>

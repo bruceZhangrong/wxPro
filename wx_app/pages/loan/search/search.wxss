@@ -1,0 +1,27 @@
+@import '../loan.wxss';
+
+/*btn*/
+.search-loan-btn {
+    margin-top: 180rpx;
+}
+.middle-wrapper {
+    padding: 30rpx;
+    background: -webkit-gradient(linear, 0 0, 100% 100%, from(rgb(254,244,208)), to(rgb(254,234,227)));
+    border-radius: 50%;
+}
+.outer-wrapper {
+    padding: 20rpx;
+    background: -webkit-gradient(linear, 0 0, 100% 100%, from(#fffbef), to(#fff7f4));
+    border-radius: 50%;
+}
+.loan-btn {
+    width: 280rpx;
+    height: 280rpx;
+    line-height: 280rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: -webkit-gradient(linear, 0 0, 100% 100%, from(#fad026), to(#fea27d));
+    font-size: 28rpx;
+    box-shadow: 0 0 5px #fff;
+}

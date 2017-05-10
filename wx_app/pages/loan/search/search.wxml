@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="home-banner">
+        <view class="cover">
+            <view class="cover-words">
+              <view class="title  mark-color">公积金客户</view>
+              <view class="hr"></view>
+              <view class="title-dec">信用贷款30万</view>
+            </view>
+            <view class="bottom-tips">
+                <view class="tips-cell" wx:for="{{bannerBottomAd}}" wx:for-item="items">
+                    {{items.content}}
+                    <text class="mark-color">{{items.variable}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="search-loan-btn">
+        <view class="outer-wrapper" bindtap="searchLoanBalance">
+            <view class="middle-wrapper">
+                <view class="loan-btn">查询贷款额度</view>
+            </view>
+        </view>
+    </view>
+</view>

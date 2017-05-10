@@ -1,0 +1,21 @@
+<view class="container">
+	<view class="home-banner banner-position">
+        <view class="cover">
+            <view class="finnances-rate">
+              <view class="tbox-left title">
+                预计年化收益率
+              </view>
+              <view class="tbox-right title">4.06%</view>
+            </view>
+        </view>
+    </view>
+    <view class="finnances-tip">
+      <text class="font-weight">请输入您的手机号码，马上享受理财:</text>
+      <input bindinput="bindKeyInput" class="finnances-phone font-weight" maxlength="11" placeholder="请输入您的手机号码" />
+    </view>
+    <view class="finnances-btn">
+      <button size="default" class="f-btn" bindtap="getPost">
+        提交
+      </button>
+    </view>
+</view>
