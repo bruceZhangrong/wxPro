@@ -7,7 +7,7 @@
     "pages/loan/search/search",
     "pages/finances/finances",
     "pages/service/service",
-    "pages/finances/financesdetail/index"
+    "pages/components/success/index"
   ],
   "window": {
     "navigationBarTitleText": "小程序"

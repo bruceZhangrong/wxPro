@@ -13,3 +13,21 @@
 .mark-color {
     color: #da9133;
 }
+input, input::-webkit-input-placeholder {
+    font-family: 'Microsoft yahei';
+    font-size: 28rpx;
+}
+.placeholder-family {
+    font-size: 28rpx;
+    font-family: 'Microsoft yahei';
+}
+.btn-next {
+    width: 520rpx;
+    height: 80rpx;
+    margin-top: 170rpx;
+    border-radius: 80rpx;
+    border: 1px solid #d4923b;
+    background: #fff;
+    color: #d4923b;
+    font-size: 30rpx;
+}

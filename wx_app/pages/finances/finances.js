@@ -16,7 +16,7 @@ Page({
     }
     if(this.phone.length>10){
       wx.navigateTo({
-        url: '../finances/financesdetail/index',
+        url: '../components/success/index',
       })
     }else{
       wx.showToast({

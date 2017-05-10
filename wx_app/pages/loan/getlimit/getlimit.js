@@ -38,5 +38,8 @@ Page({
             });
             return;
         }
+        wx.redirectTo({
+            url: '../../components/success/index',
+        })
     }
 })
