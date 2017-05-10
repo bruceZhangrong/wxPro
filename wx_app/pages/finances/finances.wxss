@@ -45,3 +45,16 @@
 .finnances-btn{
   margin: 170rpx auto 0px;
 }
+<<<<<<< HEAD
+=======
+.f-btn{
+  background-color:transparent;
+  border:2rpx solid #e69342;
+  color:#e69342;
+  border-radius:40rpx;
+  height:70rpx;
+  height:70rpx;
+  line-height:70rpx;
+  font-size:30rpx;
+}
+>>>>>>> b967ac58095d8a3862a64ad8aff80d7868175153
