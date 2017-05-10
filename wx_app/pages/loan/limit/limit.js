@@ -17,7 +17,9 @@ Page({
                 content: `随借随还`
             },
         ],
-        limitNumber:3000
+        limitNumber:3000,
+        active: [`active`, `active`, ``],
+        on: ['on', '']
     },
     onLoad: function() {
         this.setData({

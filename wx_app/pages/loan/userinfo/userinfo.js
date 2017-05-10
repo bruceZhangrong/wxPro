@@ -17,7 +17,23 @@ Page({
             },
         ],
         phoneVal: '',
-        nameVal: ''
+        nameVal: '',
+        active: [`active`,``,``],
+        on: ['',''],
+        tempInputData: [
+            {
+                inputTitle: `身份证号码：`,
+                inputPlaceholder: `请输入您的身份证号码`,
+                inputType: `idcard`,
+                blurEvent: `getPhoneValue`
+            },
+            {
+                inputTitle: `姓    名：`,
+                inputPlaceholder: `请输入您的姓名`,
+                inputType: `text`,
+                blurEvent: `getNameValue`
+            }
+        ]
     },
     onLoad: function(options) {
         console.log(options);
@@ -41,13 +57,9 @@ Page({
         })
     },
     getPhoneValue: function(e) {
-        this.setData({
-            phoneVal: e.detail.value
-        })
+        this.data.phoneVal = e.detail.value;
     },
     getNameValue: function(e) {
-        this.setData({
-            nameVal: e.detail.value
-        })
+        this.data.nameVal = e.detail.value;
     },
 })

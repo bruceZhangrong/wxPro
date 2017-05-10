@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/loan/userinfo/userinfo",
     "pages/index/index",
     "pages/loan/getlimit/getlimit",
     "pages/loan/limit/limit",
-    "pages/loan/userinfo/userinfo",
     "pages/loan/search/search",
     "pages/finances/finances",
     "pages/service/service"

@@ -121,8 +121,9 @@
 .input-cell {
     display: flex;
     height: 100rpx;
-    padding-top: 30rpx;
-    line-height: 38rpx;
+    padding-top: 29rpx;
+    padding-bottom: 20rpx;
+    line-height: 50rpx;
     box-sizing: border-box;
     border-bottom: 1px solid #e4e4e4;
 }
@@ -134,8 +135,15 @@
 }
 .input-cell input {
     flex: 1;
+    height: 50rpx;
+    line-height: 50rpx;
+    min-height: 50rpx;
 }
-
+.placeholder-css {
+    line-height: 50rpx;
+    font-size: 28rpx;
+    font-family: 'Microsoft yahei';
+}
 /*btn-next*/
 .btn-next {
     width: 520rpx;

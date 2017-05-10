@@ -15,9 +15,28 @@ Page({
             {
                 content: `随借随还`
             },
+        ],
+        idCardVal: '',
+        active: [`active`, `active`, `active`],
+        on: ['on', 'on'],
+        tempInputData: [
+            {
+                inputTitle: `手机号码：`,
+                inputPlaceholder: `请输入您的手机号码`,
+                inputType: `number`,
+                blurEvent: `getIdCardValue`
+            },
         ]
     },
-    searchLoanBalance: function(e) {
-        
+    getIdCardValue: function(e) {
+            this.data.idCardVal= e.detail.value
+    },
+    goNext: function() {
+        if(this.data.idCardVal == '') {
+            wx.showToast({
+                title: '请输入您的手机号码',
+            });
+            return;
+        }
     }
 })

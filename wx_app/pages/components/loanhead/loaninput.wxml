@@ -1,0 +1,8 @@
+<template name="loanInput">
+    <view class="input-cell">
+        <view class="input-title">{{inputTitle}}</view>
+        <input type="{{inputType}}" placeholder="{{inputPlaceholder}}" bindblur="{{blurEvent}}" placeholder-class="placeholder-css"/>
+    </view>
+</template>
+
+module.exports.loanInput = loanInput;
