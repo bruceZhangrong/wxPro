@@ -29,25 +29,38 @@ const util = {
     },
 
     //格式化money
-    formatMoney(num) {
-        if(typeof num != 'number' ) {
+    formatMoney(num, retain = 2) {
+        if(typeof num != 'number') {
             alert('请输入数字');
             return;
         }
         let str = [];
         let arr = [];
-        if(num.include('.')) {
-            num = num.toStrong();
-            str.push(num.split('.')[0]);
-            str.push(num.spit('.')[1]);
-            arr[0] = Array.from(str[0]);
-            for(let i = arr[0].length/3; i > 0; i += 3) {
-                
+        let decimal = [];
+        let intNum = '';
+        num = num.toString();
+        if (num.includes('.')) {
+            intNum = num.split('.')[0];
+            decimal = Array.from(num.split('.')[1]);
+        } else {
+            intNum = num;
+        }
+        for (let k = 0; k < retain; k++) {
+            if (decimal[k] == undefined || decimal[k] == '') {
+                decimal[k] = '0';
             }
         }
+        decimal = decimal.join('');
+        intNum = Array.from(intNum).reverse();
+        for (let i = 0, j = 0; i < intNum.length; i++ , j++) {
+            if (i % 3 == 0 && i > 0) {
+                arr[j] = ',';
+                j++;
+            }
+            arr[j] = intNum[i];
+        }
+        return `${arr.reverse().join('')}.${decimal}`;
     }
-
-    
 }
 
 export default util

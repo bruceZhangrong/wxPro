@@ -1,3 +1,4 @@
+import Util from '../../../util/util.js'
 Page({
     data: {
         bannerBottomAd: [
@@ -17,6 +18,11 @@ Page({
             },
         ],
         limitNumber:3000
+    },
+    onLoad: function() {
+        this.setData({
+            limitNumber: Util.formatMoney(this.data.limitNumber)
+        })
     },
     getLimit: function() {
         wx.navigateTo({
