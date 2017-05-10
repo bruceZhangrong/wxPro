@@ -16,15 +16,15 @@ Page({
             }
         ]
     },
-    onLoad: function() {
+    onLoad() {
         console.log('onload');
     },
-    call: function() {
+    call() {
         wx.makePhoneCall({
             phoneNumber: '13828477648'
         })
     },
-    goTo: function(event) {
+    goTo(event) {
         let index = event.currentTarget.dataset.index;
         console.log(index);
         if(index == 0) {
