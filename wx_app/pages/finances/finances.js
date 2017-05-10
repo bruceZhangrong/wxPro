@@ -4,9 +4,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    phone:null
   },
-
+  getPost(){
+    if (this.phone == null){
+      wx.showToast({
+        title: '请输入您的手机号码！',
+        duration: 2000
+      });
+      return
+    }
+    if(this.phone.length>10){
+      wx.navigateTo({
+        url: '../finances/financesdetail/index',
+      })
+    }else{
+      wx.showToast({
+        title: '您输入的号码长度有误！',
+        duration:2000
+      });
+      console.log(this.phone.length);
+    }
+  },
+  bindKeyInput(e){
+    this.phone = e.detail.value
+  },
   /**
    * 生命周期函数--监听页面加载
    */

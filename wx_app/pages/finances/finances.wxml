@@ -11,7 +11,7 @@
     </view>
     <view class="finnances-tip">
       <text class="font-weight">请输入您的手机号码，马上享受理财:</text>
-      <input bindinput="bindKeyInput" class="finnances-phone font-weight" maxlength="11" placeholder="请输入您的手机号码" />
+      <input type="number" bindinput="bindKeyInput" class="finnances-phone font-weight" maxlength="11" placeholder="请输入您的手机号码" />
     </view>
     <view class="finnances-btn">
       <button size="default" class="f-btn" bindtap="getPost">

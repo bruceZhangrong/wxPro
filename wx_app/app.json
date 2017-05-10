@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index", 
     "pages/loan/index",
-    "pages/finances/index",
     "pages/finances/financesdetail/index",
     "pages/service/index",
     "pages/loan/getlimit/getlimit",
