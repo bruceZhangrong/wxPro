@@ -28,6 +28,25 @@ const util = {
     //    console.log(text);
     },
 
+    //格式化money
+    formatMoney(num) {
+        if(typeof num != 'number' ) {
+            alert('请输入数字');
+            return;
+        }
+        let str = [];
+        let arr = [];
+        if(num.include('.')) {
+            num = num.toStrong();
+            str.push(num.split('.')[0]);
+            str.push(num.spit('.')[1]);
+            arr[0] = Array.from(str[0]);
+            for(let i = arr[0].length/3; i > 0; i += 3) {
+                
+            }
+        }
+    }
+
     
 }
 

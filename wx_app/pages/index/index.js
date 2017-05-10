@@ -28,11 +28,11 @@ Page({
         let index = event.currentTarget.dataset.index;
         console.log(index);
         if(index == 0) {
-            wx.navigateTo({url:`../loan/index`});
+          wx.navigateTo({ url:`../loan/search/search`});
         } else if(index == 1) {
-            wx.navigateTo({url:`../finances/index`});
+          wx.navigateTo({ url:`../finances/finances`});
         } else {
-            wx.navigateTo({url:`../service/index`});
+          wx.navigateTo({ url:`../service/service`});
         }
     }
     

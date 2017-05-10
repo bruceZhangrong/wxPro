@@ -1,0 +1,12 @@
+@import '../loan.wxss';
+
+/*limt-info*/
+.limit-info {
+    text-align: center;
+    padding-top: 60rpx;
+    color: #34455f;
+}
+.limit-info-number {
+    font-size: 56rpx;
+    margin-top: 22rpx;
+}
