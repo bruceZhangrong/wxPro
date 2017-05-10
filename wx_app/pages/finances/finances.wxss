@@ -51,8 +51,12 @@
   margin: 340rpx auto 0px;
 }
 .f-btn{
-  background-color: transparent;
-  border: 2rpx solid #e69342;
-  color: #e69342;
-  border-radius: 40rpx;
+  background-color:transparent;
+  border:2rpx solid #e69342;
+  color:#e69342;
+  border-radius:40rpx;
+  height:70rpx;
+  height:70rpx;
+  line-height:70rpx;
+  font-size:30rpx;
 }
