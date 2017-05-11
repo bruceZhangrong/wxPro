@@ -6,6 +6,20 @@ Page({
   data: {
     phone:null
   },
+  onShareAppMessage(){
+    return {
+      title: '你好',
+      path: '/pages/finances/finances',
+      success(res){
+        // 转发成功
+        console.log(`转发成功`);
+      },
+      fail(res){
+        console.log(`转发失败`);
+        // 转发失败
+      }
+    }
+  },
   getPost(){
     if (this.phone == null){
       wx.showToast({
@@ -40,7 +54,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
   },
 
   /**
