@@ -1,3 +1,4 @@
+import Util from '../../util/util.js'
 Page({
 
   /**
@@ -24,7 +25,8 @@ Page({
     if (this.phone == null){
       wx.showToast({
         title: '请输入您的手机号码！',
-        duration: 2000
+        duration: 2000,
+        image: `../../images/icon-error.png`
       });
       return
     }
@@ -35,7 +37,8 @@ Page({
     }else{
       wx.showToast({
         title: '您输入的号码长度有误！',
-        duration:2000
+        duration:2000,
+        image: `../../images/icon-error.png`
       });
       console.log(this.phone.length);
     }
@@ -47,7 +50,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    Util.changeTitle('活期理财');
   },
 
   /**

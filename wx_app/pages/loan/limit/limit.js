@@ -21,7 +21,8 @@ Page({
         active: [`active`, `active`, ``],
         on: ['on', '']
     },
-    onLoad: function() {
+    onLoad: function () {
+        Util.changeTitle('信用贷款');
         this.setData({
             limitNumber: Util.formatMoney(this.data.limitNumber)
         })

@@ -1,3 +1,4 @@
+import Util from '../../../util/util.js'
 Page({
     data: {
         bannerBottomAd: [
@@ -36,19 +37,21 @@ Page({
         ]
     },
     onLoad: function(options) {
-        console.log(options);
+        Util.changeTitle('信用贷款');
     },
     goNext: function() {
         // console.log(phoneVal,nameVal)
         if(this.data.phoneVal == '') {
             wx.showToast({
-                title: '请输入正确的手机号码'
+                title: '请输入正确的手机号码',
+                image: '../../../images/icon-error.png'
             })
             return;
         }
         if (this.data.nameVal == '') {
             wx.showToast({
-                title: '请输入您的名字'
+                title: '请输入您的名字',
+                image: '../../../images/icon-error.png'
             })
             return;
         }

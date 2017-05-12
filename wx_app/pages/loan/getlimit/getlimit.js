@@ -1,3 +1,4 @@
+import Util from '../../../util/util.js'
 Page({
     data: {
         bannerBottomAd: [
@@ -28,6 +29,9 @@ Page({
             },
         ]
     },
+    onLoad() {
+        Util.changeTitle('信用贷款');
+    },
     getIdCardValue: function(e) {
             this.data.idCardVal= e.detail.value
     },
@@ -35,6 +39,7 @@ Page({
         if(this.data.idCardVal == '') {
             wx.showToast({
                 title: '请输入您的手机号码',
+                image: `../../../images/icon-error.png`
             });
             return;
         }

@@ -10,7 +10,7 @@
     "pages/components/success/index"
   ],
   "window": {
-    "navigationBarTitleText": "小程序"
+    "navigationBarTitleText": ""
   },
   
   "networkTimeout": {

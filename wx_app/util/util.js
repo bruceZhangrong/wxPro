@@ -60,6 +60,13 @@ const util = {
             arr[j] = intNum[i];
         }
         return `${arr.reverse().join('')}.${decimal}`;
+    },
+    changeTitle(title) {
+        wx.showNavigationBarLoading();
+        wx.setNavigationBarTitle({
+            title: title,
+            complete: () => { wx.hideNavigationBarLoading(); }
+        })
     }
 }
 

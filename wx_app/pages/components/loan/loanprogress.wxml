@@ -26,5 +26,3 @@
         </view>
     </view>
 </template>
-
-module.exports.loanProgress = loanProgress;

@@ -4,5 +4,3 @@
         <input type="{{inputType}}" placeholder="{{inputPlaceholder}}" bindblur="{{blurEvent}}" placeholder-class="placeholder-css"/>
     </view>
 </template>
-
-module.exports.loanInput = loanInput;

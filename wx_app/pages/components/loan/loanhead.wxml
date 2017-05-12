@@ -16,5 +16,4 @@
     </view>
 </template>
 
-module.exports.loanHead = loanHead;
 

@@ -1,4 +1,5 @@
 // index.js
+import Util from '../../../util/util.js'
 Page({
   data:{
     scanData: [
@@ -16,5 +17,8 @@ Page({
     wx.reLaunch({
         url: `../../index/index`,
     });
+  },
+  onLoad() {
+      Util.changeTitle('领取额度');
   }
 })

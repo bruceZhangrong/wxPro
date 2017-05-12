@@ -51,7 +51,6 @@
 }
 .cell-title {
     font-size: 36rpx;
-    margin-bottom: 12rpx;
 }
 .cell-content {
     font-size: 24rpx;

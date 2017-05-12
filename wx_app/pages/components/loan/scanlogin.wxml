@@ -27,5 +27,3 @@
         </view>
     </view>
 </template>
-
-module.exports.scanLogin = scanLogin;

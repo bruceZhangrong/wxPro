@@ -1,3 +1,4 @@
+import Util from '../../../util/util.js'
 Page({
     data: {
         bannerBottomAd: [
@@ -16,6 +17,9 @@ Page({
                 content: `随借随还`
             },
         ]
+    },
+    onLoad() {
+        Util.changeTitle('信用贷款');
     },
     searchLoanBalance: function(e) {
         wx.navigateTo({

@@ -1,4 +1,4 @@
-
+import Util from '../../util/util.js'
 Page({
     data: {
         giftContents: [
@@ -17,6 +17,7 @@ Page({
         ]
     },
     onLoad() {
+        Util.changeTitle('小程序');
         console.log('onload');
     },
     call() {
