@@ -1,10 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>小程序</title>
+    <link rel="stylesheet" href="src/css/common/reset.css">
 </head>
-<body>
+<style type="text/css">
+.container {
+    text-align: center;
+}
+.font-white{
+  color:#fff;
+}
 
+/*head*/
+.home-banner {
+    text-align: center;
+    width: 100%; height: 240px;
+    font-weight: bold;
+    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494304401162&di=2db05ab4770795e04859abe369fc800a&imgtype=0&src=http%3A%2F%2Fimg1.gamedog.cn%2F2013%2F11%2F27%2F121-13112G525020.jpg) no-repeat center center;
+    background-size: 100% 100%;
+
+}
+.cover {
+    width: 100%; height: 100%;
+    padding: 84px 0;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.2);
+}
+.title {
+    font-size: 20px;
+    color: #fff;
+
+}
+.hr {
+    width: 90px;
+    height: 0;
+    border: 1px solid #fff;
+    margin:10px auto;
+}
+.title-dec {
+    font-size: 25px;
+}
+/*content*/
+.content-list {
+    width: 100%;
+}
+.content-list-cell {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 18px;
+}
+.left-cell {
+    flex: 2;
+    text-align: left;
+}
+.cell-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.cell-content {
+    font-size: 12px;
+}
+.right-cell {
+    flex: 1;
+    line-height: 49px;
+    color: #949494;
+    text-align: right;
+}
+.right-cell img {
+    width: 14px;
+    height: 14px;
+    vertical-align: -1px;
+    margin-left: 6px;
+}
+.hot-line {
+    margin-top: 55px;
+    color: #bcbcbc;
+}
+</style>
+<body>
+<div class="nav-header">小程序</div>
+<div class="container">
+    <div class="home-banner" onclick="">
+        <div class="cover">
+            <span class="title">公积金客户</span>
+            <div class="hr"></div>
+            <span class="title-dec mark-color">三大专属礼遇</span>
+        </div>
+    </div>
+    <div class="content-list" id="contenlist">
+    </div>
+    <div class="hot-line">
+        <span bindtap="call">建行服务热线：95533</span>
+    </div>
+</div>
 </body>
-<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+function goTo(index) {
+    if(index == 0) {
+        window.location.href =  `../wx_html/web/loan/search/search.html` ;
+    } else if(index == 1) {
+        window.location.href =  `../loan/finances/finances` ;
+    } else {
+        window.location.href =  `../loan/service/service` ;
+    }
+};
+window.onload = ()=>{
+    let list = ``;
+    let giftContents = [
+            {
+                title: `信用贷款`,
+                content: `额度最高30万，年利率5.6%`
+            },
+            {
+                title: `活期理财`,
+                content: `闲钱理财，存取自由`
+            },
+            {
+                title: `便民服务`,
+                content: `生活便民，缴费一账通`
+            }
+        ];
+    giftContents.map((v,k)=>{
+        list += `
+            <div class="content-list-cell" data-index="${k}" onclick="goTo(${k})">
+                <div class="left-cell">
+                    <div class="cell-title mark-color">${v.title}</div>
+                    <span class="cell-content">${v.content}</span>
+                </div>
+                <div class="right-cell">
+                    <span>查看更多</span>
+                    <img src="../../images/icon-arrow-right.png" />
+                </div>
+            </div>
+        `
+    });
+    document.querySelector('#contenlist').innerHTML = list;
+};
+</script>
 </html>

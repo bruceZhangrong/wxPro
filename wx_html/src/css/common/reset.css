@@ -35,4 +35,56 @@ input, textarea, button {
 }
 .anchorBL {
 	display: none;
-} 
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    -webkit-user-select:none;
+user-select:none;
+width:100%;
+overflow-x:hidden;
+
+}
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Microsoft yahei';
+    line-height: 1.5;
+}
+.mark-color {
+    color: #da9133;
+}
+input, input::-webkit-input-placeholder {
+    font-family: 'Microsoft yahei';
+    font-size: 14px;
+}
+.placeholder-family {
+    font-size: 14px;
+    font-family: 'Microsoft yahei';
+}
+.btn-next {
+    width: 260px;
+    height: 40px;
+    margin-top: 85px;
+    border-radius: 40px;
+    border: 1px solid #d4923b;
+    background: #fff;
+    color: #d4923b;
+    font-size: 15px;
+}
+.nav-header{
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    color:#Fff;
+    text-align: center;
+    line-height: 45px;
+}
