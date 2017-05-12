@@ -1,0 +1,43 @@
+<div class="container">
+    <import src="../../components/loan/loanhead.wxml" />
+    <template is="loanHead" data="{{tipList:bannerBottomAd}}"></template>
+    <div class="schedule">
+    <div class="progress-wrapper">
+            <div class="progress-bar">
+                <div class="bar-cell {{active[0]}}">
+                    <div class="bar-step">
+                        <div class="bar-step-inside">1</div>
+                    </div>
+                    <text>身份信息</text>
+                </div>
+                <div class="bar-cell {{active[1]}}">
+                    <div class="bar-step">
+                        <div class="bar-step-inside">2</div>
+                    </div>
+                    <text>额度</text>
+                </div>
+                <div class="bar-cell {{active[2]}}">
+                    <div class="bar-step">
+                        <div class="bar-step-inside">3</div>
+                    </div>
+                    <text>提取额度</text>
+                </div>
+            </div>
+            <div class="progress-line">
+                <div class="line-list {{on[0]}}"></div>
+                <div class="line-list {{on[1]}}"></div>
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="input-cell">
+                <div class="input-title">{{inputTitle}}</div>
+                <input type="{{inputType}}" placeholder="{{inputPlaceholder}}" bindblur="{{blurEvent}}" placeholder-class="placeholder-css"/>
+            </div>
+            <div class="input-cell">
+                <div class="input-title">{{inputTitle}}</div>
+                <input type="{{inputType}}" placeholder="{{inputPlaceholder}}" bindblur="{{blurEvent}}" placeholder-class="placeholder-css"/>
+            </div>
+        </div>
+        <button class="btn-next" bindtap="goNext">下一步</button>
+    </div>
+</div>
