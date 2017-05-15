@@ -35,33 +35,17 @@
     color: #d4923b;
     font-size: 15px;
 }
-.search-loan-btn {
-    margin-top: 90px;
-}
-.middle-wrapper {
-    padding: 15px;
-    background: -webkit-gradient(linear, 0 0, 100% 100%, from(rgb(254,244,208)), to(rgb(254,234,227)));
-    border-radius: 50%;
-}
-.outer-wrapper {
-    padding: 10px;
-    background: -webkit-gradient(linear, 0 0, 100% 100%, from(#fffbef), to(#fff7f4));
-    border-radius: 50%;
-}
-.loan-btn {
-    width: 140px;
-    height: 140px;
-    line-height: 140px;
-    text-align: center;
-    color: #fff;
-    border-radius: 50%;
-    background: -webkit-gradient(linear, 0 0, 100% 100%, from(#fad026), to(#fea27d));
-    font-size: 14px;
-    box-shadow: 0 0 5px #fff;
-    margin: 0 auto;
-}
 .mark-color {
     color: #da9133;
+}
+.limit-info {
+    text-align: center;
+    padding-top: 30px;
+    color: #34455f;
+}
+.limit-info-number {
+    font-size: 28px;
+    margin-top: 11px;
 }
 </style>
 <body>
@@ -105,7 +89,7 @@
                     </div>
                     <text>身份信息</text>
                 </div>
-                <div class="bar-cell">
+                <div class="bar-cell active">
                     <div class="bar-step">
                         <div class="bar-step-inside">2</div>
                     </div>
@@ -119,44 +103,22 @@
                 </div>
             </div>
             <div class="progress-line">
-                <div class="line-list"></div>
+                <div class="line-list on"></div>
                 <div class="line-list"></div>
             </div>
         </div>
-        <div class="user-info">
-            <div class="input-cell">
-                <div class="input-title">身份证号码：</div>
-                <input type="number" placeholder="请输入您的身份证号码" onblur="getPhoneValue(event)" placeholder-class="placeholder-css"/>
-            </div>
-            <div class="input-cell">
-                <div class="input-title">姓    名：</div>
-                <input type="text" placeholder="请输入您的姓名" onblur="getNameValue(event)" placeholder-class="placeholder-css"/>
-            </div>
+        <div class="limit-info">
+            <div class="limit-info-title">可贷额度(元)</div>
+            <div class="limit-info-number">￥3000</div>
         </div>
-        <button class="btn-next" onclick="goNext()">下一步</button>
+        <button class="btn-next" onclick="getLimit()">领取额度</button>
     </div>
 </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-let phoneVal='',nameVal='';
-function getPhoneValue(event) {
-    phoneVal = event.target.value;
-}
-function getNameValue(event) {
-    nameVal = event.target.value;
-}
-function goNext() {
-    // console.log(phoneVal,nameVal)
-    if(phoneVal == '') {
-        alert('请输入正确的身份证号码')
-        return
-    }
-    if (nameVal == '') {
-        alert('请输入您的名字')
-        return
-    }
-    window.location.href =  `../limit/limit.html` ;
+function getLimit() {
+    window.location.href =  '../getlimit/getlimit.html'
 }
 </script>
 </html>

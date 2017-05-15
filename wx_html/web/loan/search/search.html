@@ -14,7 +14,9 @@
     <meta name="format-detection" content="telephone=no, email=no">
     <title>小程序</title>
     <link rel="stylesheet" href="../../../src/css/common/reset.css">
+    <link rel="stylesheet" href="../../../src/css/loan.css">
 </head>
+<script src="../../../src/js/commom/commom.js"></script>
 <style type="text/css">
 .cover {
     width: 100%; height: 100%;
@@ -195,7 +197,11 @@
 }
 </style>
 <body>
-<div class="nav-header">小程序</div>
+<div class="nav-header">
+    <div class="left" onclick="GoBack()">返回</div>
+    <div class="center">小程序</div>
+    <div class="right">...</div>
+</div>
 <div class="container">
     <div class="home-banner">
         <div class="cover">
@@ -223,7 +229,7 @@
         </div>
     </div>
     <div class="search-loan-btn">
-        <div class="outer-wrapper" onclick="searchLoanBalance">
+        <div class="outer-wrapper" onclick="searchLoanBalance()">
             <div class="middle-wrapper">
                 <div class="loan-btn">查询贷款额度</div>
             </div>
@@ -233,21 +239,8 @@
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-    let bannerBottomAd = [
-            {
-                content: `年利率`,
-                variable: `5.6%`
-            },
-            {
-                content: `用时起息`
-            },
-            {
-                content: `期限`,
-                variable: `12个月`
-            },
-            {
-                content: `随借随还`
-            },
-        ]
+function searchLoanBalance(e) {
+    window.location.href =  `../userinfo/userinfo.html` ;
+}
 </script>
 </html>
