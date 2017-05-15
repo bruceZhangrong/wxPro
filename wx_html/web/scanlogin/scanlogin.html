@@ -1,9 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="divport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>领取额度</title>
+    <link rel="stylesheet" href="../../src/css/common/reset.css">
 </head>
 <body>
-
+    <div class="container text-center">
+        <div class="detailbanner">
+            <image class="bannerimage" src="../../assets/images/finnances-banner.png"></image>
+        </div>
+        <div class="">
+        <div class="ewm-title ewm-margin">
+            您已领取该额度
+        </div>
+        <div class="ewm-title">
+            扫描二维码下载app即可获得
+        </div>
+        <div class="detailbanner ewm-margin">
+            <image class="ewmimage" src="../../assets/images/ewm.png"></image>
+        </div>
+        <div class="">
+            <div class="getTitle">— 领取方法 —</div>
+            <div class="gettext">
+                <p>1.注册登录建设手机银行</p>
+                <p>2.选择理财</p>
+                <p>3.选择活期星</p>
+            </div>
+        </div>
+        </div>
+        <div class="getback-btn">
+        <button size="default" class="btn-next" onclick="backHome()">
+            返回首页
+        </button>
+        </div>
+    </div>
 </body>
+<script>
+    function backHome() {
+        window.location.href = '../../index.html'
+    }
+</script>
 </html>
