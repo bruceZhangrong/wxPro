@@ -9,4 +9,5 @@
 .limit-info-number {
     font-size: 56rpx;
     margin-top: 22rpx;
+    color: #333;
 }

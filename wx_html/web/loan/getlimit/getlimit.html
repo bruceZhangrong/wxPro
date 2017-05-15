@@ -118,11 +118,12 @@
 </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="../../../src/js/layer/layer.js"></script>
 <script type="text/javascript">
 let idCardVal = '';
 function goNext() {
     if(idCardVal == '') {
-        alert('请输入您的手机号码');
+        layer.msg('请输入您的手机号码');
         return;
     }
     window.location.href =  '../../scanlogin/scanlogin.html'

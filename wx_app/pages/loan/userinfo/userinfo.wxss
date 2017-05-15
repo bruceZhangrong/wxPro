@@ -1,2 +1,9 @@
 @import '../loan.wxss';
 
+.agree {
+    margin-top: 70rpx;
+    text-align: center;
+}
+.btn-next {
+    margin-top: 60rpx;
+}

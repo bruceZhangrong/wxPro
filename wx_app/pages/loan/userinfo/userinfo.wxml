@@ -9,6 +9,15 @@
             <template is="loanInput" data="{{...tempInputData[0]}}"></template>
             <template is="loanInput" data="{{...tempInputData[1]}}"></template>
         </view>
+        <view class="agree">
+        <checkbox-group bindchange="checkboxChange">
+            <label class="checkbox">
+                <checkbox value="agree" checked="true" />
+                <text>我已阅读并同意<text class="mark-color">《个人信息授权协议》</text></text>
+            </label>
+        </checkbox-group>
+            
+        </view>
         <button class="btn-next" bindtap="goNext">下一步</button>
     </view>
 </view>

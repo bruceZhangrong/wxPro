@@ -50,6 +50,7 @@
           font-size: 16px;
           width: 100%;
           text-align: left;
+          box-sizing: border-box;
         }
         .finnances-phone{
           margin-top: 20px;
@@ -74,6 +75,11 @@
     </style>
 </head>
 <body>
+    <div class="nav-header">
+        <div class="left" onclick="GoBack()">返回</div>
+        <div class="center">活期理财</div>
+        <div class="right">...</div>
+    </div>
     <div class="container">
     <div class="home-banner banner-position">
         <div class="cover">
@@ -95,17 +101,20 @@
 </div>
 </body>
 </html>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="../../src/js/commom/commom.js"></script>
+<script src="../../src/js/layer/layer.js"></script>
 <script>
     function getPost() {
         var phoneValue = document.getElementById('phoneValue').value;
         if (phoneValue == null){
-          alert('请输入您的手机号码！');
+          layer.msg('请输入您的手机号码！');
           return
         }
         if(phoneValue.length>10){
           window.location.href = '../scanlogin/scanlogin.html';
         }else{
-          alert('您输入的号码长度有误！');
+          layer.msg('您输入的号码长度有误！');
         }
     }
 </script>

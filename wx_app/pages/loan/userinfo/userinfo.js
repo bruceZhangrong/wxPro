@@ -34,7 +34,8 @@ Page({
                 inputType: `text`,
                 blurEvent: `getNameValue`
             }
-        ]
+        ],
+        isChecked: true
     },
     onLoad: function(options) {
         Util.changeTitle('信用贷款');
@@ -55,6 +56,13 @@ Page({
             })
             return;
         }
+        if(this.data.isChecked == false) {
+            wx.showToast({
+                title: '请阅读并同意协议',
+                image: '../../../images/icon-error.png'
+            });
+            return;
+        }
         wx.navigateTo({
             url: '../limit/limit',
         })
@@ -65,4 +73,11 @@ Page({
     getNameValue: function(e) {
         this.data.nameVal = e.detail.value;
     },
+    checkboxChange: function(e) {
+        if(e.detail.value[0] == 'agree') {
+            this.data.isChecked = true;
+        } else {
+            this.data.isChecked = false;
+        }
+    }
 })

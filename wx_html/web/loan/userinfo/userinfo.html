@@ -63,6 +63,17 @@
 .mark-color {
     color: #da9133;
 }
+.agree {
+    margin-top: 35px;
+}
+.agree input {
+    display: inline;
+    width: auto;
+    margin-right: 10px;
+}
+.btn-next {
+    margin-top: 35px;
+}
 </style>
 <body>
 <div class="nav-header">
@@ -126,20 +137,28 @@
         <div class="user-info">
             <div class="input-cell">
                 <div class="input-title">身份证号码：</div>
-                <input type="number" placeholder="请输入您的身份证号码" onblur="getPhoneValue(event)" placeholder-class="placeholder-css"/>
+                <input type="number" placeholder="请输入您的身份证号码" onblur="getPhoneValue(event)" />
             </div>
             <div class="input-cell">
                 <div class="input-title">姓    名：</div>
-                <input type="text" placeholder="请输入您的姓名" onblur="getNameValue(event)" placeholder-class="placeholder-css"/>
+                <input type="text" placeholder="请输入您的姓名" onblur="getNameValue(event)"/>
             </div>
+        </div>
+        <div class="agree">
+            <label for="check">
+                <input type="checkbox" id="check" checked="true" />
+                <text>我已阅读并同意<text class="mark-color">《个人信息授权协议》</text></text>
+            </label>
         </div>
         <button class="btn-next" onclick="goNext()">下一步</button>
     </div>
 </div>
 </body>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js">
+</script>
+<script src="../../../src/js/layer/layer.js"></script>
 <script type="text/javascript">
-let phoneVal='',nameVal='';
+let phoneVal='',nameVal='',isChecked = true;
 function getPhoneValue(event) {
     phoneVal = event.target.value;
 }
@@ -147,14 +166,18 @@ function getNameValue(event) {
     nameVal = event.target.value;
 }
 function goNext() {
-    // console.log(phoneVal,nameVal)
+    isChecked = document.getElementById('check').checked;
     if(phoneVal == '') {
-        alert('请输入正确的身份证号码')
+        layer.msg('请输入正确的身份证号码')
         return
     }
     if (nameVal == '') {
-        alert('请输入您的名字')
+        layer.msg('请输入您的名字')
         return
+    }
+    if(!isChecked) {
+        layer.msg('请阅读并同意协议');
+        return;
     }
     window.location.href =  `../limit/limit.html` ;
 }
