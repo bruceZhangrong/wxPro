@@ -80,6 +80,33 @@
         margin: 8px auto;
         width: 30px;
     }
+    .SearchBox{
+        height: 30px;
+        width: 100%;
+        background-color: #fff;
+        padding: 8px 0px;
+        line-height: 30px;
+        padding-left: 25px;
+        position: relative;
+    }
+    .SearchInput{
+        background-color: #ccc;
+        padding: 4px 0px;
+        width: 80%;
+        border-radius: 5px;
+        padding-left: 30px;
+    }
+    .cancel{
+        font-size: 16px;
+        color: #79ccec;
+    }
+    .SearchIcon{
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: 13px;
+        width: 20px;
+    }
 </style>
 <body>
 <div class="nav-header">
@@ -88,14 +115,16 @@
     <div class="right"></div>
 </div>
 <div class="container">
+    <div class="SearchBox">
+        <img class="SearchIcon" src="./assets/images/icon-search.png">
+        <input id="Search" class="SearchInput" type="search" />
+        <span class="cancel" onclick="goback()">取消</span>
+    </div>
     <div class="indexBox">
         <div class="indexTitle">
             温馨提示：以下产品和服务由其他机构提供，请谨慎选择。如需咨询，请拨打各机构服务电话。
         </div>
         <div id="indexBox">
-        </div>
-        <div class="search" onclick="GotoSearch()">
-            <img src="./assets/images/icon-search.png">
         </div>
     </div>
 </div>
@@ -114,8 +143,8 @@ let data = [
                 link:`https://www.tmall.com/`
             }
         ];
-function GotoSearch(){
-    window.location.href =  `./search.html`;
+function goback(){
+    window.location.href =  `./router.html`;
 };
 function goTo(index) {
     window.location.href =  data[index].link ;
@@ -123,7 +152,7 @@ function goTo(index) {
 function goToDetail(index) {
     window.location.href =  `./index.html`;
 };
-window.onload = ()=>{
+function getSearch(){
     let list = ``;
     data.map((v,k)=>{
         list += `
@@ -144,5 +173,10 @@ window.onload = ()=>{
     });
     document.querySelector('#indexBox').innerHTML = list;
 };
+document.querySelector('#Search').addEventListener('keyup',(e)=>{
+    if (e.code=='Enter') {
+        getSearch()
+    };
+});
 </script>
 </html>
