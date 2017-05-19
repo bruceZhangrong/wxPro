@@ -1,11 +1,11 @@
 <view class="container">
-    <import src="../../components/loan/loanhead.wxml" />
+    <import src="../../components/loan/loanhead/loanhead.wxml" />
     <template is="loanHead" data="{{tipList:bannerBottomAd}}"></template>
     <view class="schedule">
-        <import src="../../components/loan/loanprogress.wxml" />
+        <import src="../../components/loan/loanprogress/loanprogress.wxml" />
         <template is="loanProgress" data="{{active: active, on: on}}"></template>
         <view class="user-info">
-        <import src="../../components/loan/loaninput.wxml" />
+        <import src="../../components/loan/input/loaninput.wxml" />
             <template is="loanInput" data="{{...tempInputData[0]}}"></template>
         </view>
         <button class="btn-next" bindtap="goNext">领取额度</button>

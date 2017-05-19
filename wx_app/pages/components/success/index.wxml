@@ -1,5 +1,5 @@
 
 <view>
-    <import src="../../components/loan/scanlogin.wxml" /> 
+    <import src="../../components/loan/scanlogin/scanlogin.wxml" /> 
     <template is="scanLogin" data="{{...scanData[0]}}"></template>
 </view>

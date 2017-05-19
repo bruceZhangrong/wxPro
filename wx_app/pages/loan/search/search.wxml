@@ -1,5 +1,5 @@
 <view class="container">
-    <import src="../../components/loan/loanhead.wxml" />
+    <import src="../../components/loan/loanhead/loanhead.wxml" />
     <template is="loanHead" data="{{tipList:bannerBottomAd}}"></template>
     <view class="search-loan-btn">
         <view class="outer-wrapper" bindtap="searchLoanBalance">

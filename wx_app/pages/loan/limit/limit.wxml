@@ -1,8 +1,8 @@
 <view class="container">
-    <import src="../../components/loan/loanhead.wxml" />
+    <import src="../../components/loan/loanhead/loanhead.wxml" />
     <template is="loanHead" data="{{tipList:bannerBottomAd}}"></template>
     <view class="schedule">
-        <import src="../../components/loan/loanprogress.wxml" />
+        <import src="../../components/loan/loanprogress/loanprogress.wxml" />
         <template is="loanProgress" data="{{active: active, on: on}}"></template>
         <view class="limit-info">
             <view class="limit-info-title">可贷额度(元)</view>

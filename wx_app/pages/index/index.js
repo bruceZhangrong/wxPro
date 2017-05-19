@@ -1,4 +1,5 @@
 import Util from '../../util/util.js'
+let app = getApp();
 Page({
     data: {
         giftContents: [
@@ -9,16 +10,12 @@ Page({
             {
                 title: `活期理财`,
                 content: `闲钱理财，存取自由`
-            },
-            {
-                title: `便民服务`,
-                content: `生活便民，缴费一账通`
             }
         ]
     },
     onLoad() {
         Util.changeTitle('小程序');
-        console.log('onload');
+        console.log(app);
     },
     call() {
         wx.makePhoneCall({

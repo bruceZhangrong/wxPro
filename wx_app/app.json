@@ -1,12 +1,11 @@
 {
   "pages": [
-    "pages/loan/userinfo/userinfo",
     "pages/index/index",
+    "pages/loan/userinfo/userinfo",
     "pages/loan/getlimit/getlimit",
     "pages/loan/limit/limit",
     "pages/loan/search/search",
     "pages/finances/finances",
-    "pages/service/service",
     "pages/components/success/index"
   ],
   "window": {

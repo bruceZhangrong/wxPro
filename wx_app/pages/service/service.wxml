@@ -1,3 +1,0 @@
-<block>
-    <include src="../finances/finances.wxml" />
-</block>
