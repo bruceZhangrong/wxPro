@@ -31,3 +31,4 @@ input, input::-webkit-input-placeholder {
     color: #d4923b;
     font-size: 30rpx;
 }
+.bold {font-weight: bold}

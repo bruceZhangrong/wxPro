@@ -17,16 +17,16 @@ Page({
                 content: `随借随还`
             },
         ],
-        phoneVal: '',
+        idCardVal: '',
         nameVal: '',
-        active: [`active`,``,``],
+        active: [`active`,``],
         on: ['',''],
         tempInputData: [
             {
                 inputTitle: `身份证号码：`,
                 inputPlaceholder: `请输入您的身份证号码`,
                 inputType: `idcard`,
-                blurEvent: `getPhoneValue`
+                blurEvent: `getIdCardValue`
             },
             {
                 inputTitle: `姓    名：`,
@@ -41,17 +41,17 @@ Page({
         Util.changeTitle('信用贷款');
     },
     goNext: function() {
-        // console.log(phoneVal,nameVal)
-        if(this.data.phoneVal == '') {
+        // console.log(idCardVal,nameVal)
+        if (!Util.checkIdCard(this.data.idCardVal)) {
             wx.showToast({
-                title: '请输入正确的手机号码',
+                title: '身份证号码格式不正确',
                 image: '../../../images/icon-error.png'
             })
             return;
         }
-        if (this.data.nameVal == '') {
+        if (!Util.checkNickName(this.data.nameVal)) {
             wx.showToast({
-                title: '请输入您的名字',
+                title: '姓名格式不正确',
                 image: '../../../images/icon-error.png'
             })
             return;
@@ -63,12 +63,31 @@ Page({
             });
             return;
         }
-        wx.navigateTo({
-            url: '../limit/limit',
-        })
+        wx.request({
+            url: 'http://10.100.99.68:8080/WheatInterface/network/quotaInquiry',
+            data: {
+                cid: 123,
+                name: '张荣'
+            },
+            method: 'GET',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+            },
+            success: function (res) {
+                let quote = res.data;
+                let params = 'quote=' + quote;   
+                wx.navigateTo({
+                    url: '../limit/limit?' + params
+                })
+            },
+            error: function (res) {
+                console.log('error', res.data)
+            }
+        });
+        
     },
-    getPhoneValue: function(e) {
-        this.data.phoneVal = e.detail.value;
+    getIdCardValue: function(e) {
+        this.data.idCardVal = e.detail.value;
     },
     getNameValue: function(e) {
         this.data.nameVal = e.detail.value;
@@ -79,5 +98,10 @@ Page({
         } else {
             this.data.isChecked = false;
         }
+    },
+    goPotocol: function() {
+        wx.navigateTo({
+            url: '../msgPotocol/msgPotocol',
+        })
     }
 })

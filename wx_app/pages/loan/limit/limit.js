@@ -18,7 +18,7 @@ Page({
             },
         ],
         limitNumber:3000,
-        active: [`active`, `active`, ``],
+        active: [`active`, `active`],
         on: ['on', '']
     },
     onLoad: function () {
@@ -29,7 +29,7 @@ Page({
     },
     getLimit: function() {
         wx.navigateTo({
-            url: '../getlimit/getlimit',
+            url: '../../components/success/index',
         })
     }
 })

@@ -1,0 +1,7 @@
+<view class="container potocol-wrapper ">
+    <view class="poto-title">个人信息授权书</view>
+    <view class="poto-cell bold">尊敬的客户：为了维护您的权益，请在签署本授权书前，仔细阅读本授权书各条款（特别是黑体字条款），关注您在授权书中的权利、义。</view>
+    <view class="poto-cell second-title">深圳市住房公积金管理中心：</view>
+    <view class="poto-cell bold"><text class="cell-title">本人同意并不可撤销地授权：</text>贵中心向中国建设银行股份有限公司传递本人身份信息，包括名字、证件类型、证件号码等，用于本人查询建设银行贷款额度等需要。</view>
+    <view class="poto-cell bold">本人声明：本人已仔细阅读上述所有条款，并已特别注意字体加黑的内容。贵中心已应本人要求对相关条款予以明确说明。本人对所有条款的含义及相应的法律后果已全部通晓并充分理解，本人自愿作出上述授权、承诺和声明。</view>
+</view>

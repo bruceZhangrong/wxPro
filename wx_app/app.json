@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/loan/msgPotocol/msgPotocol",
     "pages/loan/userinfo/userinfo",
-    "pages/loan/getlimit/getlimit",
     "pages/loan/limit/limit",
     "pages/loan/search/search",
     "pages/finances/finances",

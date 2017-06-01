@@ -13,16 +13,9 @@
                 </view>
                 <text>额度</text>
             </view>
-            <view class="bar-cell {{active[2]}}">
-                <view class="bar-step">
-                    <view class="bar-step-inside">3</view>
-                </view>
-                <text>提取额度</text>
-            </view>
         </view>
         <view class="progress-line">
             <view class="line-list {{on[0]}}"></view>
-            <view class="line-list {{on[1]}}"></view>
         </view>
     </view>
 </template>

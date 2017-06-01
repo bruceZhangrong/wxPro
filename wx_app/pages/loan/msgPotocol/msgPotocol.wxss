@@ -1,0 +1,20 @@
+.potocol-wrapper {
+    padding: 0 40rpx;
+}
+.poto-title {
+    font-size: 36rpx;
+    line-height: 100rpx;
+    text-align: center;
+}
+.poto-cell {
+    width: 100%;
+    font-size: 28rpx;
+    text-indent: 2em;
+    line-height: 2em;
+}
+.poto-cell .cell-title {
+    font-weight: normal;
+}
+.second-title {
+    margin: 30rpx 0;
+}

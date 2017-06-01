@@ -1,33 +1,5 @@
 const util = {
 
-    //时间补全两位(ES7)  mb:ES6不支持
-    // Str, cover='0', num=2 参数
-    padStartStr(num) {
-        // if(typeof Str !== 'string') {
-        //     Str = Str.toString();
-        // } 
-        // return Str.padStart(num, cover);
-        if(num < 10) {
-            num = '0' + num;
-        }
-        return num;
-    },
-
-    //格式化时间
-    formatTime(param) {
-        // console.log(param)
-       let year = param.getFullYear();
-       let month = this.padStartStr(param.getMonth() + 1);  
-       let day = this.padStartStr(param.getDate());  
-
-       let hour = this.padStartStr(param.getHours());
-       let minute = this.padStartStr(param.getMinutes());
-       let second = this.padStartStr(param.getSeconds());
-       let text = `${year}-${month}-${day}  ${hour}:${minute}:${second}`;
-       return text
-    //    console.log(text);
-    },
-
     //格式化money
     formatMoney(num, retain = 2) {
         if(typeof num != 'number') {
@@ -61,12 +33,42 @@ const util = {
         }
         return `${arr.reverse().join('')}.${decimal}`;
     },
+    //改变title
     changeTitle(title) {
         wx.showNavigationBarLoading();
         wx.setNavigationBarTitle({
             title: title,
             complete: () => { wx.hideNavigationBarLoading(); }
         })
+    },
+    //校验身份证
+    checkIdCard(idNum) {
+        if(idNum == '') {
+            return false;
+        }
+        if(typeof idNum != 'string') {
+            idNum = idNum.toString();
+        }
+        let regEighteen = new RegExp(/^[1-9]\d{0,16}[\dXx]$/);
+        let regFifteen = new RegExp(/^[1-9]\d{0,14}$/);
+        if(regEighteen.test(idNum) || regEighteen.test(idNum)) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+    //姓名验证
+    checkNickName(nickName) {
+        if(nickName == '') {
+            return false;
+        }
+        let reg1 = new RegExp(/^[\u4e00-\u9fa5]{2,}$/);
+        let reg2 = new RegExp(/^[a-zA-Z]{2,}$/);
+        if (reg1.test(nickName) || reg2.test(nickName)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
