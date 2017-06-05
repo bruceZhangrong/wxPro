@@ -12,93 +12,14 @@
     <meta name="x5-page-mode" content="app">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="format-detection" content="telephone=no, email=no">
-    <title>小程序</title>
+    <title>建设银行</title>
     <link rel="stylesheet" href="src/css/common/reset.css">
+    <link rel="stylesheet" href="src/css/index.css">
 </head>
-<style type="text/css">
-.container {
-    text-align: center;
-}
-.font-white{
-  color:#fff;
-}
-
-/*head*/
-.home-banner {
-    text-align: center;
-    width: 100%; height: 240px;
-    font-weight: bold;
-    background: url(./assets/images/bg-head.png) no-repeat center center;
-    background-size: 100% 100%;
-
-}
-.cover {
-    width: 100%; height: 100%;
-    padding: 84px 0;
-    box-sizing: border-box;
-    background: rgba(0,0,0,.2);
-}
-.title {
-    font-size: 20px;
-    color: #fff;
-
-}
-.hr {
-    width: 90px;
-    height: 0;
-    border: 1px solid #fff;
-    margin:10px auto;
-}
-.title-dec {
-    font-size: 25px;
-}
-/*content*/
-.content-list {
-    width: 100%;
-}
-.content-list-cell {
-    display: flex;
-    box-sizing: border-box;
-    width: 100%;
-    height: 80px;
-    border-bottom: 1px solid #d8d8d8;
-    padding: 18px;
-}
-.left-cell {
-    flex: 2;
-    text-align: left;
-}
-.cell-title {
-    font-size: 18px;
-    margin-bottom: 6px;
-}
-.cell-content {
-    font-size: 12px;
-}
-.right-cell {
-    flex: 1;
-    line-height: 49px;
-    color: #949494;
-    text-align: right;
-}
-.right-cell img {
-    display: inline;
-    width: 14px;
-    height: 14px;
-    vertical-align: -1px;
-    margin-left: 6px;
-}
-.hot-line {
-    margin-top: 55px;
-}
-.hot-line a {
-    color: #bcbcbc;
-}
-</style>
 <body>
 <div class="nav-header">
     <div class="left"></div>
-    <div class="center">小程序</div>
+    <div class="center">首页</div>
     <div class="right"></div>
 </div>
 <div class="container">
@@ -117,47 +38,5 @@
 </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-function goTo(index) {
-    if(index == 0) {
-        window.location.href =  `./web/loan/loan.html` ;
-    } else if(index == 1) {
-        window.location.href =  `./web/finances/finances.html` ;
-    } else {
-        window.location.href =  `./web/service/service.html` ;
-    }
-};
-window.onload = ()=>{
-    let list = ``;
-    let giftContents = [
-            {
-                title: `信用贷款`,
-                content: `额度最高30万，年利率5.6%`
-            },
-            {
-                title: `活期理财`,
-                content: `闲钱理财，存取自由`
-            },
-            {
-                title: `便民服务`,
-                content: `生活便民，缴费一账通`
-            }
-        ];
-    giftContents.map((v,k)=>{
-        list += `
-            <div class="content-list-cell" data-index="${k}" onclick="goTo(${k})">
-                <div class="left-cell">
-                    <div class="cell-title mark-color">${v.title}</div>
-                    <span class="cell-content">${v.content}</span>
-                </div>
-                <div class="right-cell">
-                    <span>查看更多</span>
-                    <img src="./assets/images/icon-arrow-right.png" />
-                </div>
-            </div>
-        `
-    });
-    document.querySelector('#contenlist').innerHTML = list;
-};
-</script>
+<script src="./src/js/index.js"></script>
 </html>

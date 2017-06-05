@@ -14,80 +14,7 @@
     <meta name="format-detection" content="telephone=no, email=no">
     <title>活期理财</title>
     <link rel="stylesheet" href="../../src/css/common/reset.css">
-    <style type="text/css">
-        .banner-position{
-          position: relative;
-        }
-        .home-banner {
-          font-weight: normal;
-        }
-        .content-mark {
-          width: 180px;
-          height: 30px;
-          line-height: 30px;
-          font-size: 16px;
-          background: url(../../assets/images/bg-huoqilicai.png) no-repeat center center;
-          background-size: 100% 100%;
-          margin: 0 auto;
-        }
-        .cover {
-          padding: 40px 0;
-        }
-        .fs-32 { font-size: 32px; margin: 12px 0 10px; }
-        .finnances-rate{
-          position:absolute;
-          bottom:0px;
-          left:0px;
-          background-color:rgba(51,69,97,0.4);
-          width: 100%;
-          display: flex;
-          text-align: center;
-          height: 40px;
-          line-height: 40px;
-        }
-        .tbox-left{
-          flex:2;
-          text-align: center;
-          font-size: 16px;
-          color:#fff;
-          letter-spacing: 1px;
-        }
-        .tbox-right{
-          flex:1;
-          text-align: left;
-          color: rgb(240, 137, 30);
-          font-size: 17px;
-        }
-
-        .finnances-tip{
-          padding: 0 22px;
-          padding-top:28px;
-          font-size: 16px;
-          width: 100%;
-          text-align: left;
-          box-sizing: border-box;
-        }
-        .finnances-phone{
-          margin-top: 20px;
-          padding-bottom: 10px;
-          border-bottom:1px solid #ccc;
-
-        }
-        .finnances-btn{
-          margin: 85px auto 0px;
-        }
-        .f-btn{
-          background-color:transparent;
-          border:1px solid #e69342;
-          color:#e69342;
-          border-radius:20px;
-          height:35px;
-          height:35px;
-          line-height:35px;
-          font-size:16px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../../src/css/finances.css">
 </head>
 <body>
     <div class="nav-header">
@@ -116,7 +43,7 @@
         <input type="tel" class="finnances-phone" maxlength="11" placeholder="请输入您的手机号码" id="phoneValue" />
     </div>
     <div class="finnances-btn">
-        <button class="btn-next" onclick="getPost()">提交</button>
+        <button class="btn-next">提交</button>
     </div>
 </div>
 </body>
@@ -124,17 +51,4 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="../../src/js/commom/commom.js"></script>
 <script src="../../src/js/layer/layer.js"></script>
-<script>
-    function getPost() {
-        var phoneValue = document.getElementById('phoneValue').value;
-        if (phoneValue == null){
-          layer.msg('请输入您的手机号码！');
-          return
-        }
-        if(phoneValue.length>10){
-          window.location.href = '../scanlogin/scanlogin.html';
-        }else{
-          layer.msg('您输入的号码长度有误！');
-        }
-    }
-</script>
+<script src="../../src/js/finances.js"></script>

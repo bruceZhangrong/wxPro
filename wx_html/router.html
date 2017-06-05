@@ -12,79 +12,14 @@
     <meta name="x5-page-mode" content="app">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="format-detection" content="telephone=no, email=no">
-    <title>小程序</title>
+    <title>建设银行</title>
     <link rel="stylesheet" href="src/css/common/reset.css">
+    <link rel="stylesheet" href="src/css/router.css">
 </head>
-<style type="text/css">
-    body{
-        background-color: rgb(237,236,234);
-    }
-
-    img{
-        max-width: 100%;
-    }
-    .indexBox{
-        padding:0 12px;
-    }
-    .indexTitle{
-        padding: 12px 0px;
-    }
-    .indexContent{
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 0px 10px;
-        text-align: center;
-        margin-bottom: 25px;
-    }
-    .ContentTitle{
-        padding: 5px 0px;
-    }
-    .ContentTitle img{
-        margin: 0px auto;
-    }
-    .ContentBox{
-        border-bottom: 1px solid #ccc;
-        padding-bottom:25px;
-    }
-    .ContentBottom{
-        display: flex;
-        height: 40px;
-        line-height: 40px;
-    }
-    .BottomLeft{
-        flex:1;
-        text-align: left;
-    }
-    .BottomRight{
-        flex:1;
-    }
-    .floatRight{
-        float: right;
-        width: 24px;
-        margin-top: 8px;
-    }
-    .clearfix{
-        clear: both;
-    }
-    .search{
-        position: fixed;
-        right: 10px;
-        top: 200px;
-        width: 45px;
-        height: 45px;
-        background-color: rgba(204, 204, 204, 0.32);
-        border-radius: 50%;
-        line-height: 45px;
-    }
-    .search img{
-        margin: 8px auto;
-        width: 30px;
-    }
-</style>
 <body>
 <div class="nav-header">
     <div class="left"></div>
-    <div class="center">小程序</div>
+    <div class="center">建设银行</div>
     <div class="right"></div>
 </div>
 <div class="container">
@@ -95,54 +30,11 @@
         <div id="indexBox">
         </div>
         <div class="search" onclick="GotoSearch()">
-            <img src="./assets/images/icon-search.png">
+            <img src="./src/images/icon-search.png">
         </div>
     </div>
 </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-let data = [
-            {
-                title: `./assets/images/icon1.png`,
-                content: `./assets/images/content1.jpg`,
-                link:`https://www.baidu.com/`
-            },
-            {
-                title: `./assets/images/icon2.png`,
-                content: `./assets/images/content2.jpg`,
-                link:`https://www.tmall.com/`
-            }
-        ];
-function GotoSearch(){
-    window.location.href =  `./search.html`;
-};
-function goTo(index) {
-    window.location.href =  data[index].link ;
-};
-function goToDetail(index) {
-    window.location.href =  `./index.html`;
-};
-window.onload = ()=>{
-    let list = ``;
-    data.map((v,k)=>{
-        list += `
-            <div class="indexContent">
-                <div class="ContentTitle">
-                    <img src="${v.title}">
-                </div>
-                <div class="ContentBox" onclick="goToDetail()">
-                    <img src="${v.content}">
-                </div>
-                <div class="ContentBottom" onclick="goTo(${k})" >
-                    <div class="BottomLeft">查看更多</div>
-                    <div class="BottomRight"><img class="floatRight" src="./assets/images/icon-arrow-right.png"></div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        `
-    });
-    document.querySelector('#indexBox').innerHTML = list;
-};
-</script>
+<script src="./src/js/router.js"></script>
 </html>

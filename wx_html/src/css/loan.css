@@ -1,149 +1,64 @@
-.home-banner {
-    text-align: center;
-    width: 100%; height: 240px;
-    font-weight: bold;
-    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494304401162&di=2db05ab4770795e04859abe369fc800a&imgtype=0&src=http%3A%2F%2Fimg1.gamedog.cn%2F2013%2F11%2F27%2F121-13112G525020.jpg) no-repeat center center;
-    background-size: 100% 100%;
-
+.detailbanner{
+  width:100%;
 }
-.cover {
-    width: 100%; height: 100%;
-    padding: 55px 0;
-    box-sizing: border-box;
-    background: rgba(0,0,0,.2);
-    display: flex;
-    position: relative;
+.bannerimage{
+  width: 100%;
+  height: 190px;
 }
-.cover-words {
-    flex: 1;
+.ewmimage{
+  width: 103px;
+  height: 103px;
 }
-.title {
-    font-size: 24px;
+.ewm-margin{
+  margin-top: 35px;
 }
-.hr {
-    width: 150px;
-    height: 0;
-    border: 1px solid #fff;
-    margin:5px auto;
+.getTitle{
+  margin:40px auto 20px;
+  width: 122px;
+  height: 29px;
 }
-.title-dec {
-    font-size: 28px;
-    color: #fff;
-}
-.bottom-tips {
-    box-sizing: border-box;
+.getTitle image {
     width: 100%;
-    padding: 0 6px;
-    height:40px;
+    height: 100%;
+}
+.gettext{
+  text-align: left;
+  font-size: 15px;
+  line-height: 24px;
+  color: #334561;
+}
+.info-list {
+    width: 100%;
+    height: 40px;
     line-height: 40px;
-    background: rgba(255, 255, 255, .5);
-    position: absolute; bottom: 0; left: 0;
-    color: #fff;
-    font-style: italic;
     display: flex;
-    font-size: 14px;
-}
-.bottom-tips .tips-cell {
-    flex: 1;
+    color: #334561;
     text-align: center;
 }
-
-/*progress*/
-.schedule {
-    width: 100%;
-    box-sizing: border-box;
-    padding:0 27.5px;
+.list-cell {
+    flex: 1;
 }
-.progress-bar {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 11;
-}
-.bar-cell {
-    width: 57px;
-    text-align: center;
-    font-size: 13px;
-    color: #dfdfdf;
-}
-.bar-cell.active {
-    color: #344561;
-}
-.bar-step {
-    width: 22px;
-    height: 22px;
-    padding: 2.5px;
-    background: rgba(204,204,204,.2);
+.list-cell .key-wrapper {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d4923a;
     border-radius: 50%;
+    font-size: 12px;
+    margin-top: 9px;
+    margin-right: 5px;
+}
+.key-wrapper .key-self {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 50%;
+    background: #d4923a;
     margin: 0 auto;
-    margin-bottom: 5px;
-}
-.bar-step-inside {
-    width: 22px;
-    height: 22px;
-    line-height: 22px;
-    border-radius: 50%;
-    background: #dfdfdf;
-    color: #989898;
-}
-.bar-cell.active .bar-step {
-    background: rgba(204,204,204,.5);
-}
-.bar-cell.active .bar-step-inside {
-    background: #344561;
+    margin-top: 3px;
     color: #fff;
 }
-.progress-wrapper {
-    padding-top: 35px;
-    position: relative;
-    margin-bottom: 30px;
+.btn-next {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
-.progress-line {
-    width: 285.5px;
-    height: 1px;
-    position: absolute; top: 48.5px; left: 0; right: 0;
-    margin: 0 auto;
-    z-index: 10;
-    display: flex;
-}
-.line-list {
-    flex: 1;
-    border: 1px solid #dedede;
-}
-.line-list.on {
-    border-color: #344561;
-}
-/*输入框*/
-.user-info {
-    display: flex;
-    flex-direction: column;
-}
-.input-cell {
-    display: flex;
-    height: 50px;
-    padding-top: 14.5px;
-    padding-bottom: 10px;
-    line-height: 25px;
-    box-sizing: border-box;
-    border-bottom: 1px solid #e4e4e4;
-}
-.input-title {
-    width: 114px;
-    font-size: 14px;
-    line-height: 25px;
-    color: #333;
-}
-.input-cell input {
-    flex: 1;
-    height: 25px;
-    line-height: 25px;
-    min-height: 25px;
-    border:none;
-}
-.placeholder-css {
-    line-height: 25px;
-    font-size: 14px;
-    font-family: 'Microsoft yahei';
-}
-/*btn-next*/
-
