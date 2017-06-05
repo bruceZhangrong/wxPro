@@ -40,6 +40,8 @@ input {
 .anchorBL {
 	display: none;
 }
+.color-fff { color: #fff }
+.color-mark { color: #e19027; }
 
 *{
     padding: 0px;
@@ -67,7 +69,7 @@ overflow-x:hidden;
     text-align: center;
     width: 100%; height: 240px;
     font-weight: bold;
-    background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1494304401162&di=2db05ab4770795e04859abe369fc800a&imgtype=0&src=http%3A%2F%2Fimg1.gamedog.cn%2F2013%2F11%2F27%2F121-13112G525020.jpg) no-repeat center center;
+    background: url(../../../assets/images/bg-head.png) no-repeat center center;
     background-size: 100% 100%;
 
 }
